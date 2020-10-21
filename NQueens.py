@@ -1,9 +1,17 @@
+
 queens = [
     [0, 0, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0]
 ]
+
+def createNQueensArray(size):
+    queens = []
+    for _ in range(size):
+        row = [0] * size
+        queens.append(row)
+    return queens
 
 def checkDiagonal(row, column):
     for y in range(len(queens)):
@@ -48,4 +56,6 @@ def solve(n = 0):
                 queens[row][column] = 0
 
 
+
+queens = createNQueensArray(4)
 solve()
